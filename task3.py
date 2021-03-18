@@ -1,11 +1,11 @@
 def appearance(intervals: dict) -> int:
     lesson_sec = set(range(intervals['lesson'][0], intervals['lesson'][1]))
     tutor_sec = [
-      set(range(intervals['tutor'][i], intervals['tutor'][i+1] + 1)) \
+      set(range(intervals['tutor'][i], intervals['tutor'][i+1])) \
         for i in range(0, len(intervals['tutor']), 2)
     ]
     pupil_sec = [
-      set(range(intervals['pupil'][i], intervals['pupil'][i+1] + 1)) \
+      set(range(intervals['pupil'][i], intervals['pupil'][i+1])) \
         for i in range(0, len(intervals['pupil']), 2)
       ]
     result_seconds = len(
